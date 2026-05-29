@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     spaceBetween: 24,
     loop: true,
-    speed: 600,
+    speed: 500,
     autoplay: {
-      delay: 5000,
+      delay: 4000,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
@@ -41,9 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: '.testimonials-swiper .swiper-button-prev',
     },
     breakpoints: {
-      640: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
+      768: { slidesPerView: 2, spaceBetween: 24 },
+      1024: { slidesPerView: 3, spaceBetween: 24 },
     },
   });
 
