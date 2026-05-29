@@ -24,9 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── SWIPER: TESTIMONIALS ─────────────────────────────────── */
   new Swiper('.testimonials-swiper', {
     slidesPerView: 1,
+    slidesPerGroup: 1,
     spaceBetween: 24,
     loop: true,
     speed: 500,
+    observer: true,
+    observeParents: true,
     autoplay: {
       delay: 4000,
       disableOnInteraction: false,
@@ -41,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: '.testimonials-swiper .swiper-button-prev',
     },
     breakpoints: {
-      768: { slidesPerView: 2, spaceBetween: 24 },
-      1024: { slidesPerView: 3, spaceBetween: 24 },
+      768:  { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 24 },
+      1024: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 24 },
     },
   });
 
@@ -102,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   document.querySelectorAll(
-    '.service-card, .why-feature, .step, .testimonial-card, .serve-item, .stat-item'
+    '.service-card, .why-feature, .step, .serve-item, .stat-item'
   ).forEach((el, i) => {
     el.classList.add('reveal');
     el.dataset.delay = i % 4; // stagger per row
